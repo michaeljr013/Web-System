@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Different Types of Dogs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #add8e6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            max-width: 1100px;
+            padding: 20px;
+        }
+        table {
+            margin: 0 auto;
+            border-spacing: 20px;
+        }
+        td {
+            vertical-align: top;
+            text-align: center;
+            width: 200px;
+        }
+        img {
+            border-radius: 12px;
+            margin-top: 10px;
+            width: 200px;
+            height: auto;
+        }
+        iframe {
+            border-radius: 12px;
+            margin-top: 20px;
+            width: 560px;
+            max-width: 100%;
+            height: 315px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Different Types of Dogs</h1>
+        <button onclick="changeBackgroundColor()">Change Background</button>
+		<p>Click the picture to view more information about the dogs!!!</p>
+
+        <table>
+            <tr>
+                <td>
+                    <h2 id="labradorTitle">Labrador Retriever</h2>
+                    <p id="labradorDesc" style="display:none;">Labradors are friendly, intelligent, and one of the most popular dog breeds worldwide.</p>
+                    <a href="#" onclick="toggleDescription('labradorDesc'); countClicks('labradorCount'); return false;">
+                        <img id="labradorImg" src="https://images.pexels.com/photos/8700/wall-animal-dog-pet.jpg?auto=compress&cs=tinysrgb&h=350" alt="Labrador Retriever" onmouseover="highlightText('labradorTitle')" onmouseout="unhighlightText('labradorTitle')">
+                    </a>
+                   
+                </td>
+                <td>
+                    <h2 id="germanShepherdTitle">German Shepherd</h2>
+                    <p id="germanShepherdDesc" style="display:none;">German Shepherds are loyal, confident, and often used as police or service dogs.</p>
+                    <a href="#" onclick="toggleDescription('germanShepherdDesc'); countClicks('germanShepherdCount'); return false;">
+                        <img id="germanShepherdImg" src="https://images.pexels.com/photos/333083/pexels-photo-333083.jpeg?auto=compress&cs=tinysrgb&h=350" alt="German Shepherd" onmouseover="highlightText('germanShepherdTitle')" onmouseout="unhighlightText('germanShepherdTitle')">
+                    </a>
+                  
+                </td>
+                <td>
+                    <h2 id="goldenRetrieverTitle">Golden Retriever</h2>
+                    <p id="goldenRetrieverDesc" style="display:none;">Golden Retrievers are gentle, loving, and great family pets known for their golden coats.</p>
+                    <a href="#" onclick="toggleDescription('goldenRetrieverDesc'); countClicks('goldenRetrieverCount'); return false;">
+                        <img id="goldenRetrieverImg" src="https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Golden Retriever" onmouseover="highlightText('goldenRetrieverTitle')" onmouseout="unhighlightText('goldenRetrieverTitle')">
+                    </a>
+              
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2 id="bulldogTitle">Bulldog</h2>
+                    <p id="bulldogDesc" style="display:none;">Bulldogs are calm, courageous, and affectionate with a distinctive wrinkled face.</p>
+                    <a href="#" onclick="toggleDescription('bulldogDesc'); countClicks('bulldogCount'); return false;">
+                        <img id="bulldogImg" src="https://images.pexels.com/photos/1629781/pexels-photo-1629781.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Bulldog" onmouseover="highlightText('bulldogTitle')" onmouseout="unhighlightText('bulldogTitle')">
+                    </a>
+                
+                </td>
+                <td>
+                    <h2 id="chihuahuaTitle">Chihuahua</h2>
+                    <p id="chihuahuaDesc" style="display:none;">Chihuahuas are tiny, lively, and known for their bold personalities despite their small size.</p>
+                    <a href="#" onclick="toggleDescription('chihuahuaDesc'); countClicks('chihuahuaCount'); return false;">
+                        <img id="chihuahuaImg" src="https://images.pexels.com/photos/39317/chihuahua-dog-puppy-cute-39317.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Chihuahua" onmouseover="highlightText('chihuahuaTitle')" onmouseout="unhighlightText('chihuahuaTitle')">
+                    </a>
+                
+                </td>
+                <td>
+                    <h2 id="poodleTitle">Poodle</h2>
+                    <p id="poodleDesc" style="display:none;">Poodles are intelligent, active, and elegant dogs, often seen with curly coats and known for their trainability.</p>
+                    <a href="#" onclick="toggleDescription('poodleDesc'); countClicks('poodleCount'); return false;">
+                        <img id="poodleImg" src="https://images.pexels.com/photos/3299901/pexels-photo-3299901.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Poodle" onmouseover="highlightText('poodleTitle')" onmouseout="unhighlightText('poodleTitle')">
+                    </a>
+                
+                </td>
+            </tr>
+        </table>
+
+        <hr>
+        <p>
+            Want to see more dogs?  
+            <a href="https://www.pexels.com/search/dogs/" target="_blank">Click here to explore more beautiful dogs on Pexels</a>.
+        </p>
+
+        <h2>Dog Video</h2>
+        <iframe src="https://www.youtube.com/embed/JlVvlSr2Jmo" 
+                title="Dog Video" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+    </div>
+
+    <script>
+        var clickCounts = {};
+
+        function toggleDescription(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === "none") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+
+        function highlightText(id) {
+            document.getElementById(id).style.color = "blue";
+        }
+
+        function unhighlightText(id) {
+            document.getElementById(id).style.color = "black";
+        }
+
+      
+        
+        function changeBackgroundColor() {
+          var colors = ["blue", "yellow", "pink", "red"];
+          var randomColor = colors[Math.floor(Math.random() * colors.length)];
+          document.body.style.backgroundColor = randomColor;
+        }
+    </script>
+
+</body>
+</html>
