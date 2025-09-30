@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Michael Jr's Exam</title>
+  <style>
+    body {
+      margin: 0; font-family: Arial; background: #d3d3d3;
+    }
+    .sidebar {
+      width: 180px; height: 100vh; background: #FFD700;
+      position: fixed; top: 0; left: 0;
+    }
+    .sidebar a {
+      display: block; padding: 15px; color: black; text-decoration: none; font-weight: bold;
+    }
+    .sidebar a.active, .sidebar a:hover {
+      background: black; color: gold;
+    }
+    .content {
+      margin-left: 180px; padding: 20px; display: none;
+    }
+    .content.active {
+      display: block;
+    }
+    img {
+      width: 180px; border-radius: 10px; margin-top: 10px;
+    }
+    table {
+      margin: 0 auto; border-spacing: 15px;
+    }
+    input[type=text], input[type=submit] {
+      padding: 5px;
+    }
+    input[type=submit] {
+      background: gold; border: none; cursor: pointer; font-weight: bold;
+    }
+    input[type=submit]:hover {
+      background: black; color: gold;
+    }
+    .thank-you {
+      color: green; font-size: 18px; display: none; margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <a href="#" class="active" onclick="show('home', this)">Home</a>
+    <a href="#" onclick="show('about', this)">About Us</a>
+    <a href="#" onclick="show('products', this)">Products</a>
+    <a href="#" onclick="show('gallery', this)">Gallery</a>
+    <a href="#" onclick="show('contact', this)">Contact Us</a>
+  </div>
+
+  <div id="home" class="content active">
+    <h1>Welcome!</h1>
+    <p>Use the sidebar to navigate through the site.</p>
+  </div>
+
+  <div id="about" class="content">
+    <h1>About Us</h1>
+    <p>We love dogs and share info about them and
+	We also sell products!.</p>
+<br><p<Click this!!!</p>
+<a href "https://shopee.ph/petsup.woof?entryPoint=ShopBySearch&searchKeyword=petshop">
+  </div>
+
+<div id="products" class="content">
+  <h1>Products</h1>
+  <table>
+    <tr>
+      <td>
+        <a href="https://shopee.ph/Dog-and-Cat-TPR-Chew-Bone-Toy-Barbell-Molar-Stick-with-Fun-Squeaky-Sounds-Encourages-Dental-Health-i.553470531.13021608234?sp_atk=609b23b1-2dd3-430d-a13f-7d07d668c41b&xptdk=609b23b1-2dd3-430d-a13f-7d07d668c41b" target="_blank">
+          <img src="https://down-ph.img.susercontent.com/file/ph-11134258-81ztq-meo340mgjg1zb7" alt="Chew Bone Toy" width="200">
+        </a>
+      </td>
+      <td>
+        <a href="https://shopee.ph/Dog-Squeaky-Toy-Plush-Toy-for-Small-and-Large-Dogs-Pet-Chew-Toy-Durable-i.1542065709.41704651353?sp_atk=7b34fc90-aec5-44f3-873e-65870cce90c1&xptdk=7b34fc90-aec5-44f3-873e-65870cce90c1" target="_blank">
+          <img src="https://down-ph.img.susercontent.com/file/sg-11134201-7raso-mb23o5rsxggg35.webp" alt="Squeaky Plush Toy" width="200">
+        </a>
+      </td>
+      <td>
+        <a href="https://shopee.ph/Dog-Puzzle-Toys-Interactive-Slow-Feeder-Food-Dispenser-Non-Slip-Bowl-Dog-IQ-Training-Supplies-i.1306728565.27407335203?sp_atk=da639306-76b3-46d2-a0e3-2becd33ed0ef&xptdk=da639306-76b3-46d2-a0e3-2becd33ed0ef" target="_blank">
+          <img src="https://down-ph.img.susercontent.com/file/ph-11134207-7r98s-lyojmxecgrcq0c.webp" alt="Puzzle Feeder Toy" width="200">
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+<div id="gallery" class="content">
+  <h1>Dog Gallery</h1>
+  <table>
+    <tr>
+      <td><b>Labrador</b><br>
+        <a href="https://www.pexels.com/photo/adult-black-labrador-retriever-8700/" target="_blank">
+          <img src="https://images.pexels.com/photos/8700/wall-animal-dog-pet.jpg?auto=compress&cs=tinysrgb&h=350" alt="Labrador">
+        </a>
+      </td>
+      <td><b>German Shepherd</b><br>
+        <a href="https://www.pexels.com/photo/close-up-photo-of-german-shepherd-333083/" target="_blank">
+          <img src="https://images.pexels.com/photos/333083/pexels-photo-333083.jpeg?auto=compress&cs=tinysrgb&h=350" alt="German Shepherd">
+        </a>
+      </td>
+      <td><b>Golden Retriever</b><br>
+        <a href="https://www.pexels.com/photo/photography-of-golden-retriever-2253275/" target="_blank">
+          <img src="https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Golden Retriever">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td><b>Bulldog</b><br>
+        <a href="https://www.pexels.com/photo/white-and-brown-english-bulldog-1629781/" target="_blank">
+          <img src="https://images.pexels.com/photos/1629781/pexels-photo-1629781.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Bulldog">
+        </a>
+      </td>
+      <td><b>Chihuahua</b><br>
+        <a href="https://www.pexels.com/photo/short-coated-white-chihuahua-39317/" target="_blank">
+          <img src="https://images.pexels.com/photos/39317/chihuahua-dog-puppy-cute-39317.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Chihuahua">
+        </a>
+      </td>
+      <td><b>Poodle</b><br>
+        <a href="https://www.pexels.com/photo/white-poodle-sitting-on-floor-3299901/" target="_blank">
+          <img src="https://images.pexels.com/photos/3299901/pexels-photo-3299901.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Poodle">
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+  <div id="contact" class="content">
+    <h1>Contact Us</h1>
+    <form id="form" onsubmit="submitForm(event)">
+      Name:<br /><input type="text" name="name" required><br /><br />
+      Address:<br /><input type="text" name="address" required><br /><br />
+      City:<br /><input type="text" name="city"><br /><br />
+      State:<br /><input type="text" name="state" value="Philippines"><br /><br />
+      Zip:<br /><input type="text" name="zip"><br /><br />
+      <input type="submit" value="Submit">
+    </form>
+    <div id="thankYou" class="thank-you">Thank you for contacting us!</div>
+  </div>
+
+  <script>
+    function show(id, link) {
+      document.querySelectorAll('.content').forEach(div => div.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+
+      document.querySelectorAll('.sidebar a').forEach(a => a.classList.remove('active'));
+      link.classList.add('active');
+
+      // Hide thank you message and show form again if returning to contact
+      if (id === 'contact') {
+        document.getElementById('thankYou').style.display = 'none';
+        document.getElementById('form').style.display = 'block';
+      }
+    }
+
+    function submitForm(e) {
+      e.preventDefault();
+      document.getElementById('form').style.display = 'none';
+      document.getElementById('thankYou').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
